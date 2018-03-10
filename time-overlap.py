@@ -1,3 +1,5 @@
+from datetime import datetime
+
 test_set = [
     {
         'is_overlapping': False,
@@ -8,20 +10,20 @@ test_set = [
         'is_overlapping': False,
         'time_ranges': [
             {'start': '2016-01-25 10:00:25+00:00', 'end': '2016-01-26 10:00:12+00:00'},
-            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 09:59:59+59:00'},
+            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 09:59:59+00:00'},
             {'start': '2016-01-27 10:00:00+00:00', 'end': '2016-01-28 15:16:00+00:00'}
         ]
     }, {
         'is_overlapping': True,
         'time_ranges': [
             {'start': '2016-01-25 10:00:25+00:00', 'end': '2016-01-26 10:00:12+00:00'},
-            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 16:10:23+59:00'},
+            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 16:10:23+00:00'},
         ]
     }, {
         'is_overlapping': False,
         'time_ranges': [
             {'start': '2016-01-21 14:21:00+00:00', 'end': '2016-01-21 14:22:10+00:00'},
-            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 13:10:23+59:00'},
+            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 13:10:23+00:00'},
             {'start': '2016-01-21 13:10:24+00:00', 'end': '2016-01-21 13:14:24+00:00'},
             {'start': '2016-01-21 14:31:12+00:00', 'end': '2016-01-21 14:31:15+00:00'},
             {'start': '2016-01-21 13:14:27+00:00', 'end': '2016-01-21 14:20:10+00:00'},
@@ -32,7 +34,7 @@ test_set = [
         'is_overlapping': True,
         'time_ranges': [
             {'start': '2016-01-21 14:21:00+00:00', 'end': '2016-01-21 14:22:10+00:00'},
-            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 13:10:23+59:00'},
+            {'start': '2016-01-21 11:25:00+00:00', 'end': '2016-01-25 13:10:23+00:00'},
             {'start': '2016-01-21 14:25:30+00:00', 'end': '2016-01-21 14:27:32+00:00'},
             {'start': '2016-01-21 13:10:24+00:00', 'end': '2016-01-21 13:14:24+00:00'},
             {'start': '2016-01-21 13:14:27+00:00', 'end': '2016-01-21 15:20:10+00:00'},
@@ -43,15 +45,15 @@ test_set = [
 ]
 
 def isOverlapping(arr):
-	# Find out whether all the time ranges in arr overlap mutially or not.
+  # Find out whether all the time ranges in arr overlap mutially or not.
   pass
 }
 
 def run(test_cases):
 	for test_case in test_cases:
-  	if test_case['is_overlapping'] == isOverlapping(test_cases['time_ranges']):
-    	print 'Passing!'
-    else:
-    	print 'Failing'
+		if test_case['is_overlapping'] == isOverlapping(test_cases['time_ranges']):
+			print 'Passing!'
+		else:
+			print 'Failing'
 
 run(test_set)
