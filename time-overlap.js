@@ -41,3 +41,17 @@ test_set = [
         ]
     }
 ]
+
+def isOverlapping(arr):
+	# Find out whether all the time ranges in arr overlap mutially or not.
+  pass
+}
+
+def run(test_cases):
+	for test_case in test_cases:
+  	if test_case['is_overlapping'] == isOverlapping(test_cases['time_ranges']):
+    	print 'Passing!'
+    else:
+    	print 'Failing'
+
+run(test_set)
