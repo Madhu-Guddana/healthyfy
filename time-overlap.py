@@ -1,6 +1,3 @@
-from datetime
-import datetime
-
 test_set = [{
     'is_overlapping': False,
     'time_ranges': [{
@@ -78,9 +75,12 @@ test_set = [{
     }]
 }]
 
-def isOverlapping(arr): #Find out whether all the time ranges in arr overlap mutially or not.
-pass
-}
+
+
+def isOverlapping(arr):
+    #Find out whether all the time ranges in arr overlap mutially or not.
+    pass
+
 
 def run(test_cases):
     for test_case in test_cases:
@@ -88,5 +88,6 @@ def run(test_cases):
             print 'Passing!'
         else:
             print 'Failing'
+
 
 run(test_set)
